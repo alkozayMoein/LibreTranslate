@@ -1,10 +1,15 @@
 import axios from 'axios';
 import { GraphQLClient, gql } from 'graphql-request';
 
-const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiMmMzZDRlLTU2NzgtOTEwMS0xMTIxLTMxNDE1MTYxNzExMSIsImlhdCI6MTc1MDIyOTAxMCwiZXhwIjoxNzUwMzE1NDEwfQ.iVCVbO_gI-EBRpC7cwVkvc6rlg3ijpmypaNws3dgYYg'; 
+const jwtToken = 'jwt_token_here'; // Replace with your actual JWT token
+// Note: Ensure you have the correct JWT token with permissions to access the GraphQL API
+// Rreplace 'https://your-api-url/graphql' with the actual URL of your GraphQL API.
+// If your Graphql endpoint needs authentication, you need to authenticate.
+// If you don't have the PaginationInput and UpdateCastMemberInput types, you need to define them according to your GraphQL schema.
+
 
 // GraphQL setup
-const graphQLClient = new GraphQLClient('https://api.movieland.af/graphql', {
+const graphQLClient = new GraphQLClient('https://your-api-url/graphql', {
   headers: {
     Authorization: `Bearer ${jwtToken}`
   }
